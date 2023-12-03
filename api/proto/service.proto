@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option go_package = "github.com/grpc-kafka/api/proto";
+
+service KafkaService {
+    rpc TopicName (KafkaTopicRequest) returns (KafkaTopicResponse) {}
+}
+
+message KafkaTopicRequest {}
+
+message KafkaTopicResponse {
+    string topic_name = 1;
+}
+
